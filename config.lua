@@ -1,14 +1,14 @@
 maxVehiclePerformanceUpgrades = 0 -- Set to 0 to have all the upgrades
-vehicleBaseRepairCost = 600
-vehicleRepairCostMultiplier = 1
+vehicleBaseRepairCost = 0
+vehicleRepairCostMultiplier = 0
 moneyType = 'bank'
 
 -- Location Configs
 -- Add locations here
 -- Add jobs specific to the garage.
 bennyGarages = {
-    [1] = {coords = vector4(-211.55, -1324.55, 30.90, 319.73135375977), useJob = false, job = {"mechanic", "police"}},
-    [2] = {coords = vector4(109.89, 6627.07, 31.78, 221.7938), useJob = true, job = {"mechanic"}}
+    [1] = {coords = vector3(-323.5, -131.99, 38.96), useJob = true, job = {"mechanic"}},
+--    [2] = {coords = vector3(0, 0, 0), useJob = true, job = {"mechanic"}}
 }
 
 --[[ bennyLocations = {
@@ -18,20 +18,20 @@ bennyGarages = {
 -- ADJUST PRICING
 
 vehicleCustomisationPrices = {
-    cosmetics = {price = 400},
-    respray = {price = 1000},
-    performance = {prices = {0, 3250, 5500, 10450, 15250, 20500}},
-    turbo = {price = 15000},
-    wheels = {price = 400},
-    customwheels = {price = 600},
-    wheelsmoke = {price = 400},
-    windowtint = {price = 400},
-    neonside = {price = 100},
-    neoncolours = {price = 500},
-    headlights = {price = 100},
-    xenoncolours = {price = 500},
-    oldlivery = {price = 500},
-    plateindex = {price = 1000}
+    cosmetics = {price = 0},
+    respray = {price = 0},
+    performance = {prices = {0, 0, 0, 0, 0, 0}},
+    turbo = {price = 0},
+    wheels = {price = 0},
+    customwheels = {price = 0},
+    wheelsmoke = {price = 0},
+    windowtint = {price = 0},
+    neonside = {price = 0},
+    neoncolours = {price = 0},
+    headlights = {price = 0},
+    xenoncolours = {price = 0},
+    oldlivery = {price = 0},
+    plateindex = {price = 0}
 }
 
 -- RESPRAY CATEGORIES

@@ -33,7 +33,8 @@ Citizen.CreateThread(function()
     for k, v in pairs(bennyGarages) do
         local blip = AddBlipForCoord(v.coords.x,v.coords.y,v.coords.z)
         SetBlipSprite(blip, 72)
-        SetBlipScale(blip, 0.7)
+        SetBlipScale(blip, 0.9)
+        SetBlipColour(blip, 2)
         SetBlipAsShortRange(blip,true)
         BeginTextCommandSetBlipName("STRING")
         AddTextComponentString("Benny's Motorworks")
@@ -742,7 +743,7 @@ end
 RegisterNetEvent('event:control:bennys')
 AddEventHandler('event:control:bennys', function(useID)
     if IsPedInAnyVehicle(PlayerPedId(), false) then
-        bennyHeading = bennyGarages[useID].coords.w
+        bennyHeading = bennyGarages[useID].coords
         if not isPlyInBennys then -- Bennys
             enterLocation(bennyLocation)
         end
@@ -837,7 +838,7 @@ Citizen.CreateThread(function()
 
                     if nearDefault then
                         if not isPlyInBennys then
-                            Draw3DText(v.coords.x, v.coords.y, v.coords.z + 0.5, "[Press ~p~E~w~ - Enter Benny's Motorworks]", 255, 255, 255, 255, 4, 0.45, true, true, true, true, 0, 0, 0, 0, 55)
+                            Draw3DText(v.coords.x, v.coords.y, v.coords.z + 0.5, "[Press ~p~E~w~ to peform work]", 255, 255, 255, 255, 4, 0.45, true, true, true, true, 0, 0, 0, 0, 55)
                             if IsControlJustReleased(1, 38) then
                                 if (v.useJob and isAuthorized((QBCore.Functions.GetPlayerData().job.name), k)) or not v.useJob then
                                     TriggerEvent('event:control:bennys', k)
